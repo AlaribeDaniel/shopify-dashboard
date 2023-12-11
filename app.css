@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@200;300;400;500;600;700;900&family=Poppins:wght@200;300;400;500&family=Ubuntu:wght@300;400;500&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: 0;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root{
+    --HOVER: #F7F7F7;
+    --PRESSED: #F0F0F0;
+    --FOUSED: #005BD3;
+    --WHITE: #FFFFFF;
+    --LIGHT-GREEN: #36FBA1;
+    --BACKGROUND-COLOR: #F1F1F1;
+
+    /* Font color variables */
+
+    --LIGHT-FONT-COLOR: #E3E3E3;
+    --DARK-FONT-COLOR: #475467;
+
+    /*Shades of grey */
+
+    --LIGHT-GREY-100: #616161;
+    --LIGHT-GREY-50: #656266;
+    --DARK-NAV-COLOR: #322F33;
+    --DEEP-NAV-COLOR: #1C181D;
+
+    /* Font weight */
+
+    --REGULAR: 400;
+    --MEDIUM: 500;
+    --SEMI-BOLD: 600;
+
+    /* Font size */
+
+    --SMALL-FONT: 12PX;
+    --MEDIUM-FONT: 13PX;
+    --LARGE-FONT: 14PX;
+
+    /* Line height */
+
+    --SMALL-LINE-HEIGHT: 130%;
+    --LARGE-LINE-HEIGHT: 140%;
+
+    /* Line stroke color */
+
+    --SMALL-STROKE-COLOR: #EBEBEB;
+    --MID-STROKE-COLOR: rgba(0,0,0,0.07);
+    --LARGE-SRTOKE-COLOR:rgba(255,255,255,0.2);
+
+    /* Border-radius */
+
+    --SMALL-BORDER-RADIUS: 6px;
+    --MID-BORDER-RADIUS: 8px;
+
+}
+
+
+body{
+    background-color: VAR(--BACKGROUND-COLOR);
+}
+
+li{
+    list-style: none;
+}
+
+
+a{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+button{
+    display: block;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+/* utility classes */
+
+/* utility class for flex containers */
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 8px;
+}
+
+.justify{
+    justify-content: flex-start;
+}
+
+.padding{
+    padding: 6px;
+}
+
+.flex-start-align{
+    align-items: flex-start;
+}
+
+.margin-top{
+    margin-top: 8px;
+}
+
+.sm-vertical-padding{
+    padding: 2px 0;
+}
+
+.vertical-padding{
+    margin-bottom: 16px;
+}
+
+.column-gap{
+    column-gap: 96px ;
+}
+
+.link-color{
+    color: var(--FOUSED);
+}
+
+.text13px-regular{
+    font-size: var(--MEDIUM-FONT);
+    font-weight: var(--REGULAR);
+}
+
+.text13px-medium{
+    font-size: var(--MEDIUM-FONT);
+    line-height: var(--LARGE-LINE-HEIGHT);
+    font-weight: var(--MEDIUM);
+}
+
+.text13px-semi-bold{
+    font-size: var(--MEDIUM-FONT);
+    line-height: var(--LARGE-LINE-HEIGHT);
+    font-weight: var(--SEMI-BOLD);
+}
+
+.text12px-semi-bold{
+    font-size: var(--SMALL-FONT);
+    line-height: var(--SMALL-LINE-HEIGHT);
+}
+
+
+.flex-direction{
+    flex-direction: column;
+}
+
+.element-state:hover{
+    background-color: var(--LIGHT-GREY-50);
+}
+
+.element-state:focus{
+    border: 1px solid var(--FOUSED);
+}
+
+
+/* style for navbar */
+
+#Nav-bar{
+    background-color: var( --DEEP-NAV-COLOR);
+    padding: 16px 12px;
+    height: 56px;
+}
+
+progress[value]{
+    height: 4px;
+    width: 72px;
+    background-color: var(--LIGHT-FONT-COLOR);
+    border-radius: 28px;
+    transition: all 1000ms ease-in;
+}
+
+progress[value]::-webkit-progress-bar{
+    border-radius: 28px;
+    background-color: var(--LIGHT-FONT-COLOR);
+}
+
+progress[value]::-webkit-progress-value{
+    background-color: #1A1A1A;
+    border-radius: 28px;
+}
+
+
+/* stytle for the searchwrapper*/
+
+.navbar-searchwrapper{
+    width: 480px;
+    height: 32px;
+    padding: 8px;
+    background-color: var( --DARK-NAV-COLOR);
+    border: 1px solid rgba(225, 225, 225, 0.2);
+    border-radius: var(--MID-BORDER-RADIUS);
+    gap: 6px;
+}
+
+.navbar-searchwrapper input{
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+}
+
+.navbar-searchwrapper:hover{
+    border-color: var(--HOVER);
+}
+
+.navbar-searchwrapper:active{
+    border-color: var(--PRESSED);
+}
+
+
+.btn-navbar-bell-icon{
+    border-radius: var(--MID-BORDER-RADIUS);
+    background-color: var( --DARK-NAV-COLOR);
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+}
+
+.btn-navbar-profile{
+    background-color: var( --DARK-NAV-COLOR);
+    border-radius: var(--MID-BORDER-RADIUS);
+    color: #fff;
+    padding: 2px 2px 2px 8px;
+}
+
+.btn-navbar-profile-avatar{
+    border-radius: var(--SMALL-BORDER-RADIUS);
+    background-color: var(--LIGHT-GREEN);
+    color: var( --DARK-FONT-COLOR);
+    justify-content: center;
+    height: 28px;
+    width: 28px;
+}
+
+
+
+/* style for notification dropdown panel */
+
+.notification-menu{
+    width: 383px;
+    padding: 16px;
+    right: 10px;
+    z-index: 10;
+}
+
+.menu{
+    display: none;
+    position: fixed;
+    height: fit-content;
+    background-color: #fff;
+    border-radius: 14px;
+    box-shadow: 0.5px 0.5px 10px var(--LIGHT-GREY);
+    top: 64px;
+}
+
+.notification-message{
+    background-color: rgba(0,0,0,0.07);
+    margin-top: 8px;
+    padding: 16px;
+
+    /* regular text */
+    font-size: 13px;
+    line-height: 140%;
+}
+
+
+
+/* profile section */
+
+/* style for the profile drowndown menu */
+.profile-menu{
+    margin: 6px 0;
+    width: 320px;
+    height: 384px;
+    right: 10px;
+    z-index: 20;
+}
+
+.profile-menu_item{
+    border-radius: var(--MID-BORDER-RADIUS);
+    margin: 4px 6px;
+    padding: 6px;
+    font-size: 13px;
+}
+
+.profile-menu_listitem{
+    padding: 6px 0;
+}
+
+.profile-menu_item .profile-menu_email{
+    display: block;
+    font-size: 12px;
+    color: var(--LIGHT-GREY);
+}
+
+
+
+.profile-menu_item:hover{
+    background-color: var(--BACKGROUND-COLOR);
+}
+
+.profile-menu_item:active{
+    background-color: var(--PRESSED);
+}
+
+
+/* style for subscription */
+
+#Subscription{
+    background-color: #1A1A1A;
+    border-radius: var(--MID-BORDER-RADIUS);
+    color: var(--LIGHT-FONT-COLOR);
+    width: 800px;
+    height: 56px;
+    padding: 12px 8px 12px 16px;
+    margin-top: 28px;
+    /* position: absolute;
+    top: 16px; */
+}
+
+#Set-up{
+    flex-direction: column;
+    justify-content: center;
+    /* position: relative; */
+}
+
+.subscription_option{
+    background-color: #fff;
+    border-radius: var(--SMALL-BORDER-RADIUS);
+    color: #323232;
+    padding: 6px 12px;
+}
+
+#Subscription_close{
+    background-color: #1A1A1A;
+}
+
+.subscription_option:hover{
+    background-color: #E7E7E7;
+}
+.subscription_option:active{
+    background-color: #E0E0E0;
+}
+
+.subscription_option:focus{
+    border: 2px solid var(--FOUSED);
+}
+
+
+.set-up_info{
+    width: 800px;
+    background-color: #fff;
+    border-radius: 18px;
+    padding: 8px;
+    margin-top: 16px;
+}
+
+.set-up_info_header{
+    align-items: flex-start;
+    padding: 8px;
+    height: 90px;
+    width: 784px;
+}
+
+.set-up_info_title h4{
+    margin-bottom: 4px;
+}
+
+#Setup-display-btn{
+    background-color: var(--WHITE);
+    cursor: pointer;
+    height: 28px;
+    justify-content: center;
+    width: 28px;
+
+}
+
+#Setup-display-btn:focus{
+    border: 2px solid var(--FOUSED);
+    border-radius: var(--SMALL-BORDER-RADIUS);
+    background-color: var(--WHITE);
+}
+
+#Setup-display-btn:active{
+    background-color: var(--PRESSED);
+}
+
+#Setup-display-btn:hover{
+   
+    background-color: var(--BACKGROUND-COLOR);
+    border-radius: var(--SMALL-BORDER-RADIUS);
+}
+
+
+/* customisation section */
+
+.customise{
+    height: fit-content;
+    border-radius: 10px;
+    padding: 8px 8px 8px 12px;
+    margin-top: 2px;
+    transition: all 100ms ease;
+}
+
+.customise-title p{
+    margin-bottom: 16px;
+}
+
+.customise-menu-item{
+    width: 100%;
+    column-gap: 96px;
+}
+
+.customise:hover{
+    background-color: var(--HOVER);
+}
+
+.customise:active{
+    background-color: var(--PRESSED);
+}
+
+.btn_customise{
+    background-color: #404040;
+    border-radius: var(--SMALL-BORDER-RADIUS);
+    color: #F6F3F6;
+    padding: 6px 12px;
+}
+
+.btn_customise:focus{
+    border: 2px solid var(--FOUSED);
+}
+
+.check-btn{
+    border: 1px solid var(--LIGHT-GREY);
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 100ms ease-in;
+}
+
+.check-btn:focus{
+    outline: 2px solid var(--FOUSED);
+    outline-offset: 1px;
+}
+
+.not-completed circle:hover,
+.not-completed circle:focus{
+    border-color: #8A8A8A;
+    stroke-dasharray: 0 0;
+}
+
+#Customisation-name{
+    cursor: pointer;
+}
+
+@keyframes spin {
+    
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.spinner{
+
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes zoom-in{
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.completed{
+
+    animation-name: zoom-in;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+
+}
+
+
+.hidden{
+    display: none;
+}
+
+/* set the display for the menu to block i.e making it visible */
+.show-menu{
+    display: block;
+}
+
+/* set ths display of the setup menu item to flex */
+.flex-display{
+    display: flex;
+}
+
+@media only screen and (max-width:768px) {
+
+    #Nav-bar{
+        width: 100vw;
+        padding: 12px 16px;
+    }
+    .navbar-searchwrapper{
+        width: 238px;
+    }
+
+    #Profile-name{
+        display: none;
+    }
+    
+    #Profile-btn{
+        background-color: transparent;
+    }
+
+    #Subscription{
+        border-radius: 0;
+    }
+
+    #Set-up{
+        width: 100vw;
+    }
+
+    .set-up_info{
+        border-radius: 0;
+    }
+
+    #Subscription{
+        width: 100vw;
+        height: 105px;
+    }
+
+    .set-up_info{
+        width: 100vw;
+        margin-top: 16px;
+    }
+
+    .set-up_info_header{
+        width: 100vw;
+    }
+
+    .customise-menu-item{
+        display: block;
+    }
+
+    .customise-menu-item img{
+        display: none;
+    }
+}
